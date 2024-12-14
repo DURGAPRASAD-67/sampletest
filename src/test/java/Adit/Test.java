@@ -3,7 +3,7 @@ package Adit;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MayaAITest {
+public class Test {
 
     @Test
     public void testDatabaseStatus() {
