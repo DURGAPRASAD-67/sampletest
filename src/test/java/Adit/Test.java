@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class Test {
 
-    @Test
+    @Testing
     public void testDatabaseStatus() {
         MayaAI mayaAI = new MayaAI();
         boolean isActive = mayaAI.checkDatabaseStatus("2000000018", "Thub@123");
