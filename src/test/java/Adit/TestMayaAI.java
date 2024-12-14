@@ -1,6 +1,6 @@
 package Adit;
-
-import org.junit.Assert;
+import com.example.MayaAI;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class TestMayaAI {
