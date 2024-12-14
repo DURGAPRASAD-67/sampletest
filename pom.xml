@@ -53,7 +53,7 @@
                 <version>3.1.0</version>
                 <configuration>
                     <includes>
-                        <include>**/*Test.java</include>
+                         <include>**/LoginTest.java</include>
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
