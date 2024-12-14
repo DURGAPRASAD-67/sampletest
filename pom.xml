@@ -57,7 +57,7 @@
                     <!-- Report format as txt (if desired) -->
                     <reportFormat>txt</reportFormat>
                     <includes>
-                        <include>**/LoginTest.java</include>
+                        <include>**/TestMayaAI.java</include>
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
