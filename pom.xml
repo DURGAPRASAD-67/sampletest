@@ -52,8 +52,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
+                    <!-- Ensure tests are not skipped and correctly executed -->
+                    <skipTests>false</skipTests>
+                    <!-- Report format as txt (if desired) -->
+                    <reportFormat>txt</reportFormat>
                     <includes>
-                         <include>**/LoginTest.java</include>
+                        <include>**/LoginTest.java</include>
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
