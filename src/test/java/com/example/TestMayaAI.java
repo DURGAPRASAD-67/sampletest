@@ -3,7 +3,7 @@ package com.example;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MayaAITest {
+public class TestMayaAI {
 
     @Test
     public void testDatabaseStatus() {
