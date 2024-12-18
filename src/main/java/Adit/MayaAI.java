@@ -12,15 +12,18 @@ import java.time.Duration;
 public class MayaAI {
 
     public boolean checkDatabaseStatus(String rollNo, String password) {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-        //WebDriverManager.chromedriver().setup();  // Automatically sets up chromedriver
-        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = null;
 
         try {
+            // Setup WebDriverManager to manage chromedriver
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+
+            // Maximize the browser window
             driver.manage().window().maximize();
             driver.get("https://maya.technicalhub.io/");
 
-            // Updated WebDriverWait to use Duration (works in Java 8 and later)
+            // Updated WebDriverWait
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
             // Click the login link
@@ -45,9 +48,11 @@ public class MayaAI {
 
         } catch (Exception e) {
             // Log full exception stack trace for debugging
+            System.err.println("An error occurred: " + e.getMessage());
             e.printStackTrace();
             return false;
         } finally {
+            // Ensure the driver is properly closed
             if (driver != null) {
                 driver.quit();
             }
