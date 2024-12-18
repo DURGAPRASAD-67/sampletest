@@ -7,8 +7,12 @@ public class MayaAITest {
 
     @Test
     public void testDatabaseStatus() {
+        // Directly hardcoding the roll number and password
+        String rollNo = "2000000018";
+        String password = "Thub@123";
+
         MayaAI mayaAI = new MayaAI();
-        boolean isActive = mayaAI.checkDatabaseStatus("2000000018", "Thub@123");
-        Assert.assertTrue("Database should be active", isActive);
+        boolean isActive = mayaAI.checkDatabaseStatus(rollNo, password);
+        Assert.assertTrue("Expected database status to be 'Active'", isActive);
     }
 }
