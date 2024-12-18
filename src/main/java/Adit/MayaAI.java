@@ -12,7 +12,7 @@ import java.time.Duration;
 public class MayaAI {
 
     public boolean checkDatabaseStatus(String rollNo, String password) {
-        // Remove System.setProperty and use WebDriverManager to manage chromedriver
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         WebDriverManager.chromedriver().setup();  // Automatically sets up chromedriver
         WebDriver driver = new ChromeDriver();
 
