@@ -13,8 +13,8 @@ public class MayaAI {
 
     public boolean checkDatabaseStatus(String rollNo, String password) {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-        WebDriverManager.chromedriver().setup();  // Automatically sets up chromedriver
-        WebDriver driver = new ChromeDriver();
+        //WebDriverManager.chromedriver().setup();  // Automatically sets up chromedriver
+        //WebDriver driver = new ChromeDriver();
 
         try {
             driver.manage().window().maximize();
