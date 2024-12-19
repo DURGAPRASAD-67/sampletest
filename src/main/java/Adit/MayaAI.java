@@ -16,8 +16,8 @@ public class MayaAI {
 
         try {
             // Setup WebDriverManager to manage chromedriver
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+            WebDriver driver = new ChromeDriver();
 
             // Maximize the browser window
             driver.manage().window().maximize();
