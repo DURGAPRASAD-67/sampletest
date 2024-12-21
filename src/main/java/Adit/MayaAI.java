@@ -1,5 +1,3 @@
-package Adit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,9 +13,9 @@ public class MayaAI {
         WebDriver driver = null;
 
         try {
-            // Setup WebDriverManager to manage chromedriver
-            System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-            WebDriver driver = new ChromeDriver();
+            // Setup WebDriverManager with a fixed version of chromedriver
+            WebDriverManager.chromedriver().driverVersion("131.0.6778.204").setup(); // Replace with your desired version
+            driver = new ChromeDriver();
 
             // Maximize the browser window
             driver.manage().window().maximize();
